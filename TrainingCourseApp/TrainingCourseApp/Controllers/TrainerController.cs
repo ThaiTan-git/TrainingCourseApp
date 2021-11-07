@@ -53,7 +53,7 @@ namespace TrainingCourseApp.Controllers
                 trainerInDb.Specialty = trainer.Specialty;
 
                 _context.SaveChanges();
-                return RedirectToAction("index", "Trainers");
+                return RedirectToAction("index", "Trainer");
             }
 
             [HttpGet]
