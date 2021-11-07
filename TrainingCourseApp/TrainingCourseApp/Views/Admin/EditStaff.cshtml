@@ -1,0 +1,25 @@
+﻿@model TrainingCourseApp.Models.Staff
+@{
+    ViewBag.Title = "EditStaff";
+}
+
+<h2>Edit Staff</h2>
+
+@using (Html.BeginForm("EditStaff", "Admin", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Id)
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(u => u.Name)
+        @Html.EditorFor(u => u.Name, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Age)
+        @Html.EditorFor(u => u.Age, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(u => u.Address)
+        @Html.EditorFor(u => u.Address, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <button type="submit" class="btn btn-success">Edit</button>
+}

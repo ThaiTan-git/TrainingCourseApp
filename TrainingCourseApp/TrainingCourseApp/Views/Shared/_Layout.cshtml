@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using TrainingCourseApp.Roles
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,13 +18,37 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Trainning Course Application", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        if (User.IsInRole(Role.Admin))
+                        {
+                            <li>@Html.ActionLink("Staffs list", "GetStaffs", "Admin")</li>
+                            <li>@Html.ActionLink("Trainers list", "GetTrainers", "Admin")</li>
+                        }
+                        else if (User.IsInRole(Role.Staff))
+                        {
+                            <li>@Html.ActionLink("Courses", "Index", "Course")</li>
+                            <li>@Html.ActionLink("Trainers list", "GetTrainee", "Staff")</li>
+                            <li>@Html.ActionLink("Trainers in Course", "GetTrainers", "Course")</li>
+                            <li>@Html.ActionLink("Trainees in Course", "GetTrainees", "Course")</li>
+                            <li>@Html.ActionLink("Categories", "Index", "Category")</li>
+                        }
+                        else if (User.IsInRole(Role.Trainer))
+                        {
+                            <li>@Html.ActionLink("Information", "Index", "Trainer")</li>
+                            <li>@Html.ActionLink("Courses", "GetCourses", "Trainer")</li>
+                        }
+                        else if (User.IsInRole(Role.Trainee))
+                        {
+                            <li>@Html.ActionLink("Information", "Index", "Trainee")</li>
+                            <li>@Html.ActionLink("Courses", "GetCourses", "Trainee")</li>
+                        }
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
