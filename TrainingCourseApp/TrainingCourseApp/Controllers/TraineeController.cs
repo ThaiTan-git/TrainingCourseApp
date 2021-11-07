@@ -2,9 +2,11 @@
 using System.Linq;
 using System.Web.Mvc;
 using TrainingCourseApp.Models;
+using TrainingCourseApp.Roles;
 
 namespace TrainingCourseApp.Controllers
 {
+    [Authorize(Roles = Role.Trainee)]
     public class TraineeController : Controller
     {
         // GET: Trainee

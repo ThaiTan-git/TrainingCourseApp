@@ -3,9 +3,11 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using TrainingCourseApp.Models;
+using TrainingCourseApp.Roles;
 
 namespace TrainingCourseApp.Controllers
 {
+    [Authorize(Roles = Role.Trainer)]
     public class TrainerController : Controller
     {
         // GET: Trainer
