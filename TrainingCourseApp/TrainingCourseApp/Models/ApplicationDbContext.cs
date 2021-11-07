@@ -6,7 +6,7 @@ namespace TrainingCourseApp.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("TrainingCourseApp", throwIfV1Schema: false)
         {
         }
 
