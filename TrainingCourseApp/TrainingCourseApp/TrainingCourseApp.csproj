@@ -187,6 +187,10 @@
     <Compile Include="Migrations\202111070908156_AddTableOfRelationship.Designer.cs">
       <DependentUpon>202111070908156_AddTableOfRelationship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111070919238_ModifyTableRelatioship.cs" />
+    <Compile Include="Migrations\202111070919238_ModifyTableRelatioship.Designer.cs">
+      <DependentUpon>202111070919238_ModifyTableRelatioship.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -200,6 +204,7 @@
     <Compile Include="Models\Trainer.cs" />
     <Compile Include="Models\TrainerCourse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\Role.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111070908156_AddTableOfRelationship.resx">
       <DependentUpon>202111070908156_AddTableOfRelationship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111070919238_ModifyTableRelatioship.resx">
+      <DependentUpon>202111070919238_ModifyTableRelatioship.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

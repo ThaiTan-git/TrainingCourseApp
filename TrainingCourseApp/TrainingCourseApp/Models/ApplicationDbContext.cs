@@ -19,9 +19,9 @@ namespace TrainingCourseApp.Models
         public DbSet<Trainee> Trainees { get; set; }
 
         public DbSet<Course> Courses { get; set; }
-        public DbSet<TraineeCourse> TraineesCourses { get; set; }
+        public DbSet<TraineeCourse> TraineeCourses { get; set; }
 
-        public DbSet<TrainerCourse> TrainersCourses { get; set; }
+        public DbSet<TrainerCourse> TrainerCourses { get; set; }
 
         public static ApplicationDbContext Create()
         {
