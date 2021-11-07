@@ -66,7 +66,7 @@ namespace TrainingCourseApp.Controllers
             };
             _context.Courses.Add(newCourse);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Courses");
+            return RedirectToAction("Index", "Course");
         }
 
         [HttpGet]
@@ -107,7 +107,7 @@ namespace TrainingCourseApp.Controllers
             courseInDb.Description = model.Course.Description;
             courseInDb.CategoryId = model.Course.CategoryId;
             _context.SaveChanges();
-            return RedirectToAction("Index", "Courses");
+            return RedirectToAction("Index", "Course");
         }
 
         [HttpGet]

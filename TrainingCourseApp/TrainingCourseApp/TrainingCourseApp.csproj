@@ -275,12 +275,20 @@
     <Content Include="Views\Staff\CreateTrainee.cshtml" />
     <Content Include="Views\Staff\EditTrainee.cshtml" />
     <Content Include="Views\Staff\GetTrainee.cshtml" />
+    <Content Include="Views\Course\Create.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\Course\GetTrainees.cshtml" />
+    <Content Include="Views\Course\AddTrainee.cshtml" />
+    <Content Include="Views\Course\RemoveTrainee.cshtml" />
+    <Content Include="Views\Course\GetTrainers.cshtml" />
+    <Content Include="Views\Course\AddTrainer.cshtml" />
+    <Content Include="Views\Course\RemoveTrainer.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\Category\" />
-    <Folder Include="Views\Course\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
