@@ -284,11 +284,13 @@
     <Content Include="Views\Course\AddTrainer.cshtml" />
     <Content Include="Views\Course\RemoveTrainer.cshtml" />
     <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Category\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

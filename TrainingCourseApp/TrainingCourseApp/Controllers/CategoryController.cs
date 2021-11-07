@@ -17,8 +17,8 @@ namespace TrainingCourseApp.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var categories = _context.Categories.ToList();
-            return View(categories);
+            var category = _context.Categories.ToList();
+            return View(category);
         }
 
         [HttpGet]
