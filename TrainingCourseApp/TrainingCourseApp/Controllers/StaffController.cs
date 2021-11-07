@@ -98,7 +98,7 @@ namespace TrainingCourseApp.Controllers
                 .SingleOrDefault(t => t.Id == trainee.Id);
             if (traineeInDb == null)
             {
-                ModelState.AddModelError("", "Trainee is not Exist");
+                ModelState.AddModelError("", "Trainee is invalid");
                 return RedirectToAction("GetTrainee", "Staffs");
             }
             traineeInDb.Name = trainee.Name;
