@@ -191,6 +191,10 @@
     <Compile Include="Migrations\202111070919238_ModifyTableRelatioship.Designer.cs">
       <DependentUpon>202111070919238_ModifyTableRelatioship.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111071638479_AccountViewModelChange.cs" />
+    <Compile Include="Migrations\202111071638479_AccountViewModelChange.Designer.cs">
+      <DependentUpon>202111071638479_AccountViewModelChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111070919238_ModifyTableRelatioship.resx">
       <DependentUpon>202111070919238_ModifyTableRelatioship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111071638479_AccountViewModelChange.resx">
+      <DependentUpon>202111071638479_AccountViewModelChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
