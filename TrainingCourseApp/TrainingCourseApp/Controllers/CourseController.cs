@@ -118,11 +118,11 @@ namespace TrainingCourseApp.Controllers
             if (courseInDb == null)
             {
                 ModelState.AddModelError("", "Course is invalid");
-                return RedirectToAction("Index", "Courses");
+                return RedirectToAction("Index", "Course");
             }
             _context.Courses.Remove(courseInDb);
             _context.SaveChanges();
-            return RedirectToAction("Index", "Courses");
+            return RedirectToAction("Index", "Course");
         }
 
         [HttpGet]
@@ -175,12 +175,12 @@ namespace TrainingCourseApp.Controllers
             if (alreadyExist == true)
             {
                 ModelState.AddModelError("", "Trainee is already this Course");
-                return RedirectToAction("GetTrainees", "Courses");
+                return RedirectToAction("GetTrainees", "Course");
             }
             _context.TraineeCourses.Add(model);
             _context.SaveChanges();
 
-            return RedirectToAction("GetTrainees", "Courses");
+            return RedirectToAction("GetTrainees", "Course");
         }
 
         [HttpGet]
@@ -208,13 +208,13 @@ namespace TrainingCourseApp.Controllers
             if (courseTrainee == null)
             {
                 ModelState.AddModelError("", "Trainee is not in this Course");
-                return RedirectToAction("GetTrainees", "Courses");
+                return RedirectToAction("GetTrainees", "Course");
             }
 
             _context.TraineeCourses.Remove(courseTrainee);
             _context.SaveChanges();
 
-            return RedirectToAction("GetTrainees", "Courses");
+            return RedirectToAction("GetTrainees", "Course");
         }
 
         [HttpGet]
@@ -266,12 +266,12 @@ namespace TrainingCourseApp.Controllers
             if (alreadyExist == true)
             {
                 ModelState.AddModelError("", "Trainer is already this Course");
-                return RedirectToAction("GetTrainers", "Courses");
+                return RedirectToAction("GetTrainers", "Course");
             }
             _context.TrainerCourses.Add(model);
             _context.SaveChanges();
 
-            return RedirectToAction("GetTrainers", "Courses");
+            return RedirectToAction("GetTrainers", "Course");
         }
 
         [HttpGet]
@@ -299,13 +299,13 @@ namespace TrainingCourseApp.Controllers
             if (courseTrainer == null)
             {
                 ModelState.AddModelError("", "Trainer is not in this Course");
-                return RedirectToAction("GetTrainers", "Courses");
+                return RedirectToAction("GetTrainers", "Course");
             }
 
             _context.TrainerCourses.Remove(courseTrainer);
             _context.SaveChanges();
 
-            return RedirectToAction("GetTrainers", "Courses");
+            return RedirectToAction("GetTrainers", "Course");
         }
 
     }

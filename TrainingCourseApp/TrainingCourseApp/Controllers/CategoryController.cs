@@ -42,7 +42,7 @@ namespace TrainingCourseApp.Controllers
                 };
                 _context.Categories.Add(newCategory);
                 _context.SaveChanges();
-                return RedirectToAction("Index", "Categories");
+                return RedirectToAction("Index", "Category");
             }
             [HttpGet]
             public ActionResult Edit(int id)
@@ -72,7 +72,7 @@ namespace TrainingCourseApp.Controllers
                 cateInDb.Name = category.Name;
                 cateInDb.Description = category.Description;
                 _context.SaveChanges();
-                return RedirectToAction("Index", "Categories");
+                return RedirectToAction("Index", "Category");
             }
 
             [HttpGet]
@@ -86,7 +86,7 @@ namespace TrainingCourseApp.Controllers
                 }
                 _context.Categories.Remove(categoryInDb);
                 _context.SaveChanges();
-                return RedirectToAction("Index", "Categories");
+                return RedirectToAction("Index", "Category");
             }
 
         }

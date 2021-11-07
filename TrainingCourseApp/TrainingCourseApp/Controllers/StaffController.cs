@@ -73,7 +73,7 @@ namespace TrainingCourseApp.Controllers
                     await UserManager.AddToRoleAsync(user.Id, Role.Trainee);
                     _context.Trainees.Add(newTrainee);
                     _context.SaveChanges();
-                    return RedirectToAction("GetTrainee", "Staffs");
+                    return RedirectToAction("GetTrainee", "Staff");
                 }
                 AddErrors(result);
             }
@@ -99,7 +99,7 @@ namespace TrainingCourseApp.Controllers
             if (traineeInDb == null)
             {
                 ModelState.AddModelError("", "Trainee is invalid");
-                return RedirectToAction("GetTrainee", "Staffs");
+                return RedirectToAction("GetTrainee", "Staff");
             }
             traineeInDb.Name = trainee.Name;
             traineeInDb.Age = trainee.Age;
@@ -108,7 +108,7 @@ namespace TrainingCourseApp.Controllers
             traineeInDb.Education = trainee.Education;
 
             _context.SaveChanges();
-            return RedirectToAction("GetTrainee", "Staffs");
+            return RedirectToAction("GetTrainee", "Staff");
         }
 
         [HttpGet]
@@ -139,12 +139,12 @@ namespace TrainingCourseApp.Controllers
             if (traineeInDb == null || infoInDb == null)
             {
                 ModelState.AddModelError("", "Trainee is invalid");
-                return RedirectToAction("GetTrainee", "Staffs");
+                return RedirectToAction("GetTrainee", "Staff");
             }
             _context.Users.Remove(traineeInDb);
             _context.Trainees.Remove(infoInDb);
             _context.SaveChanges();
-            return RedirectToAction("GetTrainee", "Staffs");
+            return RedirectToAction("GetTrainee", "Staff");
         }
         private void AddErrors(IdentityResult result)
         {

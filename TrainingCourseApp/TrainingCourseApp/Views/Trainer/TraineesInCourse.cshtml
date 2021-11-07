@@ -1,0 +1,24 @@
+﻿@model IEnumerable<TrainingCourseApp.Models.Trainee>
+@{
+    ViewBag.Title = "TraineesInCourse";
+}
+
+<h2>Trainees in this Course</h2>
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Trainees</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>

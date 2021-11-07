@@ -309,6 +309,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Trainee\Index.cshtml" />
+    <Content Include="Views\Trainee\GetCourses.cshtml" />
+    <Content Include="Views\Trainee\SameCourseTrainee.cshtml" />
+    <Content Include="Views\Trainer\Index.cshtml" />
+    <Content Include="Views\Trainer\Edit.cshtml" />
+    <Content Include="Views\Trainer\GetCourses.cshtml" />
+    <Content Include="Views\Trainer\TraineesInCourse.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -316,8 +323,6 @@
     <Folder Include="Views\Category\" />
     <Folder Include="Views\Course\" />
     <Folder Include="Views\Staff\" />
-    <Folder Include="Views\Trainee\" />
-    <Folder Include="Views\Trainer\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
