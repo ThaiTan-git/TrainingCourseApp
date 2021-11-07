@@ -9,11 +9,11 @@ using TrainingCourseApp.ViewModels;
 namespace TrainingCourseApp.Controllers
 {
     [Authorize(Roles = Role.Staff)]
-    public class CoursesController : Controller
+    public class CourseController : Controller
     {
         // GET: Courses
         private ApplicationDbContext _context;
-        public CoursesController()
+        public CourseController()
         {
             _context = new ApplicationDbContext();
         }
